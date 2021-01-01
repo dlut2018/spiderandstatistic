@@ -88,3 +88,4 @@ try:
     spider('https://www.jd.com/','key','男装')
 except:
     print("本词条无法采集")
+print("hello")
