@@ -1,4 +1,3 @@
-import sqlite3
 from matplotlib import pyplot as plt
 import tools
 
@@ -10,4 +9,10 @@ def priceGraph(num,d,scope):
     plt.show()
 
 
-priceGraph(1000,10,(0,300))
+#显示价格与销量关系图 --未完成 待数据库结构优化
+def price_comm_graph(num,scope):
+    data = tools.price_comm_data(num,scope)
+    prices = list(data.keys())
+    comms = list(data.values())
+    plt.plot(prices,comms,'bo')
+    plt.show()
